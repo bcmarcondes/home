@@ -1,0 +1,67 @@
+<%= form_for(@debit) do |f| %>
+  <% if @debit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@debit.errors.count, "error") %> prohibited this debit from being saved:</h2>
+
+      <ul>
+      <% @debit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :debt_item %><br>
+    <%= f.select 'debt_item', options_for_select(@debit_items.collect{ |c| [c.description, c.id] }, {:include_blank => 'None'}) %>
+
+  </div>
+  <div class="field">
+    <%= f.label :user %><br>
+	<%= f.select 'user', options_for_select(@users.collect{|u| [u.name, u.id]}, {:include_blank => 'None'})%>
+	
+ </div>
+  <div class="field">
+    <%= f.label :total_value %><br>
+    <%= f.text_field :total_value %>
+  </div>
+  <div class="field">
+    <%= f.label :type_payment %><br>
+	<%= f.select 'type_payment', options_for_select(@type_payments.collect{|p| [p.description, p.id]}, {:include_blank => 'None'})%>
+  </div>
+  <div class="field">
+    <%= f.label :payment_date %><br>
+    <%= f.date_select :payment_date %>
+  </div>
+  <div class="field">
+    <%= f.label :expiration_date %><br>
+    <%= f.date_select :expiration_date %>
+  </div>
+  <div class="field">
+    <%= f.label :partition_value %><br>
+    <%= f.text_field :partition_value %>
+  </div>
+  <div class="field">
+    <%= f.label :partition_number %><br>
+    <%= f.number_field :partition_number %>
+  </div>
+  <div class="field">
+    <%= f.label :total_partition_number %><br>
+    <%= f.number_field :total_partition_number %>
+  </div>
+  <div class="field">
+    <%= f.label :type_debit %><br>
+	<%= f.select 'type_debit', options_for_select(@type_debits.collect{|p| [p.description, p.id]}, {:include_blank => 'None'})%>
+  </div>
+  <div class="field">
+    <%= f.label :invoice %><br>
+    <%= f.text_field :invoice %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

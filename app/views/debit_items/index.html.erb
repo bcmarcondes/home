@@ -1,0 +1,31 @@
+<h1>Listing debit_items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Shop</th>
+      <th>Description</th>
+      <th>Value</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @debit_items.each do |debit_item| %>
+      <tr>
+        <td><%= debit_item.shop %></td>
+        <td><%= debit_item.description %></td>
+        <td><%= debit_item.value %></td>
+        <td><%= link_to 'Show', debit_item %></td>
+        <td><%= link_to 'Edit', edit_debit_item_path(debit_item) %></td>
+        <td><%= link_to 'Destroy', debit_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Debit item', new_debit_item_path %>

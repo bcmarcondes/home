@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @debit.description %>
+</p>
+
+<p>
+  <strong>Debt item:</strong>
+  <%= @debit.debt_item %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @debit.user %>
+</p>
+
+<p>
+  <strong>Total value:</strong>
+  <%= @debit.total_value %>
+</p>
+
+<p>
+  <strong>Type payment:</strong>
+  <%= @debit.type_payment %>
+</p>
+
+<p>
+  <strong>Payment date:</strong>
+  <%= @debit.payment_date %>
+</p>
+
+<p>
+  <strong>Expiration date:</strong>
+  <%= @debit.expiration_date %>
+</p>
+
+<p>
+  <strong>Partition value:</strong>
+  <%= @debit.partition_value %>
+</p>
+
+<p>
+  <strong>Partition number:</strong>
+  <%= @debit.partition_number %>
+</p>
+
+<p>
+  <strong>Total partition number:</strong>
+  <%= @debit.total_partition_number %>
+</p>
+
+<p>
+  <strong>Type debit:</strong>
+  <%= @debit.type_debit %>
+</p>
+
+<p>
+  <strong>Invoice:</strong>
+  <%= @debit.invoice %>
+</p>
+
+<%= link_to 'Edit', edit_debit_path(@debit) %> |
+<%= link_to 'Back', debits_path %>

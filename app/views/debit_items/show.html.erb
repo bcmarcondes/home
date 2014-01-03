@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Shop:</strong>
+  <%= @debit_item.shop %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @debit_item.description %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @debit_item.value %>
+</p>
+
+<%= link_to 'Edit', edit_debit_item_path(@debit_item) %> |
+<%= link_to 'Back', debit_items_path %>

@@ -1,0 +1,27 @@
+<h1>Listing type_debits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @type_debits.each do |type_debit| %>
+      <tr>
+        <td><%= type_debit.description %></td>
+        <td><%= link_to 'Show', type_debit %></td>
+        <td><%= link_to 'Edit', edit_type_debit_path(type_debit) %></td>
+        <td><%= link_to 'Destroy', type_debit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Type debit', new_type_debit_path %>

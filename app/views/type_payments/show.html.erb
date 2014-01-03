@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @type_payment.description %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @type_payment.brand %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @type_payment.account %>
+</p>
+
+<p>
+  <strong>Agency:</strong>
+  <%= @type_payment.agency %>
+</p>
+
+<p>
+  <strong>Account owner:</strong>
+  <%= @type_payment.account_owner %>
+</p>
+
+<%= link_to 'Edit', edit_type_payment_path(@type_payment) %> |
+<%= link_to 'Back', type_payments_path %>

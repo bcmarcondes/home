@@ -1,0 +1,49 @@
+<h1>Lista das Dívidas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descrição</th>
+      <th>Debt item</th>
+      <th>User</th>
+      <th>Total value</th>
+      <th>Type payment</th>
+      <th>Payment date</th>
+      <th>Expiration date</th>
+      <th>Partition value</th>
+      <th>Partition number</th>
+      <th>Total partition number</th>
+      <th>Type debit</th>
+      <th>Invoice</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @debits.each do |debit| %>
+      <tr>
+        <td><%= debit.description %></td>
+        <td><%= debit.debt_item %></td>
+        <td><%= debit.user %></td>
+        <td><%= debit.total_value %></td>
+        <td><%= debit.type_payment %></td>
+        <td><%= debit.payment_date %></td>
+        <td><%= debit.expiration_date %></td>
+        <td><%= debit.partition_value %></td>
+        <td><%= debit.partition_number %></td>
+        <td><%= debit.total_partition_number %></td>
+        <td><%= debit.type_debit %></td>
+        <td><%= debit.invoice %></td>
+        <td><%= link_to 'Show', debit %></td>
+        <td><%= link_to 'Edit', edit_debit_path(debit) %></td>
+        <td><%= link_to 'Destroy', debit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Debit', new_debit_path %>

@@ -1,0 +1,35 @@
+<h1>Listing type_payments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Brand</th>
+      <th>Account</th>
+      <th>Agency</th>
+      <th>Account owner</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @type_payments.each do |type_payment| %>
+      <tr>
+        <td><%= type_payment.description %></td>
+        <td><%= type_payment.brand %></td>
+        <td><%= type_payment.account %></td>
+        <td><%= type_payment.agency %></td>
+        <td><%= type_payment.account_owner %></td>
+        <td><%= link_to 'Show', type_payment %></td>
+        <td><%= link_to 'Edit', edit_type_payment_path(type_payment) %></td>
+        <td><%= link_to 'Destroy', type_payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Type payment', new_type_payment_path %>

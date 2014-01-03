@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  description: MyString
+  brand: MyString
+  account: MyString
+  agency: MyString
+  account_owner: 1
+
+two:
+  description: MyString
+  brand: MyString
+  account: MyString
+  agency: MyString
+  account_owner: 1

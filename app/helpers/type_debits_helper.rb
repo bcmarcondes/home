@@ -1,0 +1,2 @@
+module TypeDebitsHelper
+end

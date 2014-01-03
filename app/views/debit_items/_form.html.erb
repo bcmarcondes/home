@@ -1,0 +1,29 @@
+<%= form_for(@debit_item) do |f| %>
+  <% if @debit_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@debit_item.errors.count, "error") %> prohibited this debit_item from being saved:</h2>
+
+      <ul>
+      <% @debit_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :shop %><br>
+    <%= f.text_field :shop %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br>
+    <%= f.text_field :value %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  description: MyString
+  debt_item_id: 
+  user_id: 
+  total_value: 1.5
+  type_payment_id: 
+  payment_date: 2014-01-02
+  expiration_date: 2014-01-02
+  partition_value: 1.5
+  partition_number: 1
+  total_partition_number: 1
+  type_debit_id: 
+  invoice: 1.5
+
+two:
+  description: MyString
+  debt_item_id: 
+  user_id: 
+  total_value: 1.5
+  type_payment_id: 
+  payment_date: 2014-01-02
+  expiration_date: 2014-01-02
+  partition_value: 1.5
+  partition_number: 1
+  total_partition_number: 1
+  type_debit_id: 
+  invoice: 1.5

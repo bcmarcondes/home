@@ -1,0 +1,21 @@
+<%= form_for(@type_debit) do |f| %>
+  <% if @type_debit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@type_debit.errors.count, "error") %> prohibited this type_debit from being saved:</h2>
+
+      <ul>
+      <% @type_debit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
