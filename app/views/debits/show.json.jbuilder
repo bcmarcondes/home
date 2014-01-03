@@ -1,1 +1,1 @@
-json.extract! @debit, :id, :description, :debt_item_id, :user_id, :total_value, :type_payment_id, :payment_date, :expiration_date, :partition_value, :partition_number, :total_partition_number, :type_debit_id, :invoice, :created_at, :updated_at
+json.extract! @debit, :id, :description, :debit_item_id, :user_id, :total_value, :type_payment_id, :payment_date, :expiration_date, :partition_value, :partition_number, :total_partition_number, :type_debit_id, :invoice, :created_at, :updated_at

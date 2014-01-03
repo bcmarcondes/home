@@ -25,16 +25,16 @@
     <% @debits.each do |debit| %>
       <tr>
         <td><%= debit.description %></td>
-        <td><%= debit.debt_item %></td>
-        <td><%= debit.user %></td>
+        <td><%= debit.debit_item.description %></td>
+        <td><%= debit.user.name %></td>
         <td><%= debit.total_value %></td>
-        <td><%= debit.type_payment %></td>
+        <td><%= debit.type_payment.description %></td>
         <td><%= debit.payment_date %></td>
         <td><%= debit.expiration_date %></td>
         <td><%= debit.partition_value %></td>
         <td><%= debit.partition_number %></td>
         <td><%= debit.total_partition_number %></td>
-        <td><%= debit.type_debit %></td>
+        <td><%= debit.type_debit.description %></td>
         <td><%= debit.invoice %></td>
         <td><%= link_to 'Show', debit %></td>
         <td><%= link_to 'Edit', edit_debit_path(debit) %></td>

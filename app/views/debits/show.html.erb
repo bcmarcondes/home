@@ -7,12 +7,12 @@
 
 <p>
   <strong>Debt item:</strong>
-  <%= @debit.debt_item %>
+  <%= @debit.debit_item.description %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @debit.user %>
+  <%= @debit.user.name %>
 </p>
 
 <p>
@@ -22,7 +22,7 @@
 
 <p>
   <strong>Type payment:</strong>
-  <%= @debit.type_payment %>
+  <%= @debit.type_payment.description %>
 </p>
 
 <p>
@@ -52,7 +52,7 @@
 
 <p>
   <strong>Type debit:</strong>
-  <%= @debit.type_debit %>
+  <%= @debit.type_debit.description %>
 </p>
 
 <p>

@@ -2,7 +2,7 @@
 
 one:
   description: MyString
-  debt_item_id: 
+  debit_item_id: 
   user_id: 
   total_value: 1.5
   type_payment_id: 
@@ -16,7 +16,7 @@ one:
 
 two:
   description: MyString
-  debt_item_id: 
+  debit_item_id: 
   user_id: 
   total_value: 1.5
   type_payment_id: 

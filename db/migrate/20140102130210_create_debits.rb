@@ -2,7 +2,7 @@ class CreateDebits < ActiveRecord::Migration
   def change
     create_table :debits do |t|
       t.string :description
-      t.references :debt_item, index: true
+      t.references :debit_item, index: true
       t.references :user, index: true
       t.float :total_value
       t.references :type_payment, index: true

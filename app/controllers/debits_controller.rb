@@ -5,6 +5,9 @@ class DebitsController < ApplicationController
   # GET /debits.json
   def index
     @debits = Debit.all
+    @debit_items = DebitItem.find(:all)
+    #require 'pry'
+    #binding.pry
   end
 
   # GET /debits/1
@@ -24,11 +27,17 @@ class DebitsController < ApplicationController
 
   # GET /debits/1/edit
   def edit
+    @debit_items = DebitItem.find(:all)
+    @users = User.find(:all)
+    @type_payments = TypePayment.find(:all)
+    @type_debits = TypeDebit.find(:all)
   end
 
   # POST /debits
   # POST /debits.json
   def create
+    require 'pry'
+    binding.pry
     @debit = Debit.new(debit_params)
 
     
@@ -75,6 +84,6 @@ class DebitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def debit_params
-      params.require(:debit).permit(:description, :debt_item_id, :user_id, :total_value, :type_payment_id, :payment_date, :expiration_date, :partition_value, :partition_number, :total_partition_number, :type_debit_id, :invoice)
+      params.require(:debit).permit(:description, :debit_item_id, :user_id, :total_value, :type_payment_id, :payment_date, :expiration_date, :partition_value, :partition_number, :total_partition_number, :type_debit_id, :invoice)
     end
 end

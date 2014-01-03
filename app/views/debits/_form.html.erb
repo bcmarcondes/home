@@ -16,13 +16,13 @@
     <%= f.text_field :description %>
   </div>
   <div class="field">
-    <%= f.label :debt_item %><br>
-    <%= f.select 'debt_item', options_for_select(@debit_items.collect{ |c| [c.description, c.id] }, {:include_blank => 'None'}) %>
+    <%= f.label :debit_item %><br>
+    <%= f.select 'debit_item_id', options_for_select(@debit_items.collect{ |c| [c.description, c.id] }, {:include_blank => 'None'}) %>
 
   </div>
   <div class="field">
     <%= f.label :user %><br>
-	<%= f.select 'user', options_for_select(@users.collect{|u| [u.name, u.id]}, {:include_blank => 'None'})%>
+	<%= f.select 'user_id', options_for_select(@users.collect{|u| [u.name, u.id]}, {:include_blank => 'None'})%>
 	
  </div>
   <div class="field">
@@ -31,7 +31,7 @@
   </div>
   <div class="field">
     <%= f.label :type_payment %><br>
-	<%= f.select 'type_payment', options_for_select(@type_payments.collect{|p| [p.description, p.id]}, {:include_blank => 'None'})%>
+	<%= f.select 'type_payment_id', options_for_select(@type_payments.collect{ |p| [p.description, p.id]}, {:include_blank => 'None'})%>
   </div>
   <div class="field">
     <%= f.label :payment_date %><br>
@@ -55,7 +55,7 @@
   </div>
   <div class="field">
     <%= f.label :type_debit %><br>
-	<%= f.select 'type_debit', options_for_select(@type_debits.collect{|p| [p.description, p.id]}, {:include_blank => 'None'})%>
+	<%= f.select 'type_debit_id', options_for_select(@type_debits.collect{|p| [p.description, p.id]}, {:include_blank => 'None'})%>
   </div>
   <div class="field">
     <%= f.label :invoice %><br>

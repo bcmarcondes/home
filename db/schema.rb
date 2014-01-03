@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20140102130210) do
 
   create_table "debits", force: true do |t|
     t.string   "description"
-    t.integer  "debt_item_id"
+    t.integer  "debit_item_id"
     t.integer  "user_id"
     t.float    "total_value"
     t.integer  "type_payment_id"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20140102130210) do
     t.datetime "updated_at"
   end
 
-  add_index "debits", ["debt_item_id"], name: "index_debits_on_debt_item_id"
+  add_index "debits", ["debit_item_id"], name: "index_debits_on_debit_item_id"
   add_index "debits", ["type_debit_id"], name: "index_debits_on_type_debit_id"
   add_index "debits", ["type_payment_id"], name: "index_debits_on_type_payment_id"
   add_index "debits", ["user_id"], name: "index_debits_on_user_id"

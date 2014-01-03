@@ -18,7 +18,7 @@ class DebitsControllerTest < ActionController::TestCase
 
   test "should create debit" do
     assert_difference('Debit.count') do
-      post :create, debit: { debt_item_id: @debit.debt_item_id, description: @debit.description, expiration_date: @debit.expiration_date, invoice: @debit.invoice, partition_number: @debit.partition_number, partition_value: @debit.partition_value, payment_date: @debit.payment_date, total_partition_number: @debit.total_partition_number, total_value: @debit.total_value, type_debit_id: @debit.type_debit_id, type_payment_id: @debit.type_payment_id, user_id: @debit.user_id }
+      post :create, debit: { debit_item_id: @debit.debit_item_id, description: @debit.description, expiration_date: @debit.expiration_date, invoice: @debit.invoice, partition_number: @debit.partition_number, partition_value: @debit.partition_value, payment_date: @debit.payment_date, total_partition_number: @debit.total_partition_number, total_value: @debit.total_value, type_debit_id: @debit.type_debit_id, type_payment_id: @debit.type_payment_id, user_id: @debit.user_id }
     end
 
     assert_redirected_to debit_path(assigns(:debit))
@@ -35,7 +35,7 @@ class DebitsControllerTest < ActionController::TestCase
   end
 
   test "should update debit" do
-    patch :update, id: @debit, debit: { debt_item_id: @debit.debt_item_id, description: @debit.description, expiration_date: @debit.expiration_date, invoice: @debit.invoice, partition_number: @debit.partition_number, partition_value: @debit.partition_value, payment_date: @debit.payment_date, total_partition_number: @debit.total_partition_number, total_value: @debit.total_value, type_debit_id: @debit.type_debit_id, type_payment_id: @debit.type_payment_id, user_id: @debit.user_id }
+    patch :update, id: @debit, debit: { debit_item_id: @debit.debit_item_id, description: @debit.description, expiration_date: @debit.expiration_date, invoice: @debit.invoice, partition_number: @debit.partition_number, partition_value: @debit.partition_value, payment_date: @debit.payment_date, total_partition_number: @debit.total_partition_number, total_value: @debit.total_value, type_debit_id: @debit.type_debit_id, type_payment_id: @debit.type_payment_id, user_id: @debit.user_id }
     assert_redirected_to debit_path(assigns(:debit))
   end
 
